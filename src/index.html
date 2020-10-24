@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestingTask</title>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <a href="" class="settings" aria-label="Settings"></a>
+            
+            <form action=""  class="search">
+                <label for="seach-input">Search</label>
+                <input type="text" id="seach-input" name="search_string" placeholder="Search" value="">
+                <button type="submit" name="search_submit" aria-label="Search submit"><img src="img/search.svg" alt="Search"></button>
+            </form>
+            
+            <nav class="main-navigation">
+                <ul>
+                    <li class="account">
+                        <a href="">Account</a>
+                        <nav class="account-navigation">
+                            <ul>
+                                <li><a href="">Account</a></li>
+                                <li><a href="">Help</a></li>
+                                <li><a href="">Give Feedback</a></li>
+                                <li><a href="">Log Out</a></li>
+                            </ul>
+                        </nav>                 
+                    </li>
+                    <li class="orders"><a href="">Orders</a></li>
+                    <li class="cart"><a href="">Cart</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
+    <main id="container">
+        <h1>Recommended Products</h1>
+        
+        <section class="tools">
+            <h2>Filters and Sorting</h2>
+            
+            <div class="filters">
+                Selected Filters:
+                <ul>
+                    <li>
+                        Continental
+                        <button type="button" aria-label="Close filter" class="filter-closer"></button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sorting">
+                Sort by:
+                <select name="" id="">
+                    <option value="">Popularity</option>
+                    <option value="">Lowest Price</option>
+                    <option value="">Most Stock</option>
+                    <option value="">Model A - Z</option>
+                    <option value="">Code No.</option>
+                </select>
+            </div>
+        
+        </section>
+
+        <section class="bestsellers">
+            <h2>Bestsellers</h2>
+            <article class="premium" data-name="Premium Bestseller">
+                <h3>Premium Bestseller</h3>
+                
+                <form action="" class="good-form" id="bestPremium">
+
+                    <div class="setout">
+                        <img src="img/wheel.svg" class="image" alt="Continental - Contiecocontact 5">
+                        <img src="img/attainment.svg" class="attainment" alt="attainment">
+                    </div>
+                
+                    <div class="good-header">
+                        <h4 class="name">Continental - Contiecocontact 5</h4>
+                    </div>
+
+                    <div class="options">
+                        <img src="img/approved.svg" alt="Approved" class="approved">
+                        
+                        <p class="type">205/55 R16 H<br>SUV</p>
+
+                        <div class="stock-price">
+                            <div class="stock instock">Stock</div>
+                            <p class="pice"> Price <span>₪340</span></p>
+                        </div>
+
+                        <div class="total">
+                            Total<br>
+                            <span class="total-price-currency">₪</span>
+                            <span class="total-price-value">1360</span>
+                        </div>
+                    </div>
+
+                    <div class="ordering">
+                        <div class="clicker">
+                            <button type="button" class="dec" aria-label="Decrease the number">&ndash;</button>
+                            <input type="text" name="number" value="4">
+                            <button type="button" class="inc" aria-label="Increase the number">+</button>
+                        </div>
+
+                        <input type="hidden" name="good_id" value="">
+                        <input type="hidden" name="good_price" value="340" class="good_price">
+                        <button type="submit" name="add_good" class="btn-order add-to-cart" data-good_id ='' aria-label="Add to cart"></button>                     
+                    </div>
+
+                </form>
+                
+            </article>
+
+
+
+
+
+            <article class="economy" data-name="Economy Bestseller">
+                <h3>Economy Bestseller</h3>
+                
+                <form action="" class="good-form" id="bestEconomy">
+
+                    <div class="setout">
+                        <img src="img/wheel.svg" class="image" alt="Continental - Contiecocontact 5">
+                        <img src="img/attainment.svg" class="attainment" alt="attainment">
+                    </div>
+                
+                    <div class="good-header">
+                        <h4 class="name">Continental - Contiecocontact 5</h4>
+                    </div>
+
+                    <div class="options">
+                        <img src="img/approved.svg" alt="Approved" class="approved">
+                        
+                        <p class="type">205/55 R16 H<br>SUV</p>
+
+                        <div class="stock-price">
+                            <div class="stock instock">Stock</div> <!--back-in-week-->
+                            <p class="pice"> Price <span>₪340</span></p>
+                        </div>
+
+                        <div class="total">
+                            Total<br>
+                            <span class="total-price-currency">₪</span>
+                            <span class="total-price-value">1360</span>
+                        </div>
+                    </div>
+
+                    <div class="ordering">
+                        <div class="clicker">
+                            <button type="button" class="dec" aria-label="Decrease the number">&ndash;</button>
+                            <input type="text" name="number" value="4">
+                            <button type="button" class="inc" aria-label="Increase the number">+</button>
+                        </div>
+
+                        <input type="hidden" name="good_id" value="">
+                        <input type="hidden" name="good_price" value="340" class="good_price">
+                        <button type="submit" name="add_good" class="btn-order notify-me" data-good_id ='' aria-label="Add to cart"></button>                     
+                    </div>
+
+                </form>
+
+            </article>
+        </section>
+
+        <section class="catalog" >
+            <h2>Catalog</h2>
+    
+            <ul class="goods">
+                <li class="item-goods">
+
+                    <form action="" class="good-form" id="itm1">
+
+                        <div class="header-container">
+                            <h4 class="name">Continental<br>PremiumContact™ 6</h4>
+                        </div>
+                        
+                        <div class="approved-container">
+                            <img src="img/approved.svg" alt="Approved" class="approved">
+                        </div>
+                        
+                        <div class="type-container">
+                            <p class="type">
+                                205/55 R16 H<br>
+                                SUV
+                            </p>
+                        </div>
+
+                        <div class="stock-container">
+                            <div class="stock back-in-week">Stock</div>
+                        </div>
+
+                        <div class="price-container">
+                            <p class="pice"> Price <span>₪340</span></p>
+                        </div>
+
+                        <div class="total-container">
+                            <p class="total">
+                                Total
+                                <span class="total-price-currency">₪</span><span class="total-price-value">1360</span>
+                            </p>
+                        </div>
+
+                        <div class="clicker-container">
+                            <div class="clicker">
+                                <button type="button" class="dec" aria-label="Decrease the number">&ndash;</button>
+                                <input type="text" name="number" value="4">
+                                <button type="button" class="inc" aria-label="Increase the number">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="btn-order-container">
+                            <button type="submit" name="add_good" class="btn-order add-to-cart" data-good_id ='' aria-label="Add to cart"></button>
+                        </div>
+
+                        <input type="hidden" name="good_id" value="">
+                        <input type="hidden" name="good_price" value="340" class="good_price">
+                    </form>                      
+
+                </li>
+
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    
+        <button >Load More Results</button>
+    </main>
+    
+</body>
+</html>

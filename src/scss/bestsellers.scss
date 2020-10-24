@@ -1,0 +1,231 @@
+@import "partials/params";
+@import "partials/mixins";
+
+#container {
+
+    & .bestsellers {
+        display: flex;
+        justify-content: space-between;
+        & h2 { @include visually-hidden; }
+        
+        & article{
+            position: relative;
+            width: 647px;
+            background-color: $mainBg ;
+            &::before{
+                content: attr(data-name);
+                position: absolute;
+                width: 153px;
+                height: 22px;
+                top: -12px;
+                background-color: $elements;
+                text-align: center;
+                font-size: 14;
+                font-weight: 700;
+                padding-top: 2px;
+            }
+            & h3 { @include visually-hidden; }
+
+            & .good-form {
+                & .setout {
+                    width: 210px;
+                    height: 175px;
+                    float: left;
+                    & img:first-child {
+                        margin: 35px auto 0 32px ;
+                    }
+                    & img:last-child {
+                        position: relative;
+                        height: 73px;
+                        width: 71px;
+                        margin-bottom: -54px;
+                        top: -127px;
+                        left: 112px;
+                    }
+                }
+
+                & .good-header {
+                    border-bottom: 2px solid black;
+                    display: flex;
+                    width: 315px;
+                    padding-top: 17px;
+                    margin-bottom: 10px;
+                    & h4 {
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin-bottom: -3px;
+                    }
+                }
+                
+                & .options {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    & .approved {
+                        flex-grow: 0;
+                        width: 64px;
+                        height: 52px;
+                    }
+                    & .type {
+                        flex-grow: 1;
+                        max-width: 125px;
+                        margin-left: 33px;
+                        line-height: 25px;
+                    }
+                    & .stock-price{
+                        flex-grow: 1;
+                        max-width: 110px;
+                        & .stock {
+                            padding-top: 3px;
+                            padding-bottom: 3px;
+                            &::before{
+                                content: '';
+                                position: relative;
+                                display: block;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 7px;
+                                margin-bottom: -14px;
+                                left: 40px;
+                                top: 3px;
+                            }
+                            &::after {
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                            &.instock {
+                                &::before {
+                                    background: url(../img/instock.svg) no-repeat; 
+                                    background-color: $inStock;
+                                    background-position: center, center;
+                                }    
+                            }
+                            &.eight-tires-left {
+                                &::before {
+                                    background: url(../img/eight-tires-left.svg) no-repeat; 
+                                    background-color: $fewStock;
+                                    background-position: center, center;
+                                }
+                                &::after {
+                                    position: relative;
+                                    content: "8 Tires Left";
+                                    top: 12px;
+                                    right: 35px;
+                                    color: $mainFontColor;
+                                    font-weight: 600;
+                                }
+                            }
+                            &.back-in-week {
+                                &::before {
+                                    background: url(../img/back-in-week.svg) no-repeat; 
+                                    background-color: $noSstock;
+                                    background-position: center, center;
+                                }
+                                &::after {
+                                    position: relative;
+                                    content: "Back in 1 week!";
+                                    top: 12px;
+                                    right: 35px;
+                                    color: $noSstock;
+                                    font-weight: 600;
+                                }
+                            }
+                        }                
+                        & .pice{
+                            // flex-shrink: 0;
+                        }
+                    }
+
+                    & .total {
+                        flex-grow: 1;
+                        width: 45px;
+                        line-height: 24px;
+                        & span {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                & .ordering {
+                    display: flex;
+                    justify-content: space-between;
+                    & .clicker {
+                        flex-shrink: 0;
+                        display: flex;
+                        border: 1px solid $softBorderColor;
+                        
+                        & button {
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                            padding-top: 0;
+                            background-color: $mainBg ;
+                            font-size: 24px;
+                            cursor: pointer;
+
+                        }
+                        & input {
+                            width: 40px;
+                            height: 40px;
+                            background-color: $clickerInputBg;
+                            text-align: center;
+                            font: inherit;
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }        
+                
+                    & .btn-order {
+                        font: inherit;
+                        font-weight: 700;
+                        width: 152px;
+                        height: 40px;
+                        border-radius: 20px;
+                        margin-right: 15px;
+                        cursor: pointer;
+                        &.add-to-cart {
+                            padding-left: 40px;
+                            background: url(../img/button_cart.svg) no-repeat;
+                            background-position: 20px center;
+                            background-color: $elements;
+                            &::before {
+                                box-sizing: content-box;
+                                display: flex;
+                                position: relative;
+                                left: -3px;
+                                top: 2px;
+                                width: 10px;
+                                height: 10px;
+                                content: '';
+                                border: 2px solid $elements;
+                                border-radius: 6px;
+                                background: url(../img/cartplus.svg) no-repeat;
+                                background-color: #000000;
+                                background-position: center center;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            &::after {
+                                position: relative;
+                                top: -6px;
+                                content: 'Add to Cart';                     
+                            }
+                        }
+                        &.notify-me {
+                            padding-left: 40px;
+                            background: url(../img/button_bell.svg) no-repeat;
+                            background-position: 20px center;
+                            background-color: $mainBg;
+                            border: 2px solid $elements;
+                            &::after {
+                                content: 'Notify Me!';
+                            }
+                        }
+                    }  
+                }
+            }
+       }
+    }
+}

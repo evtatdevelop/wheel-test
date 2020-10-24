@@ -1,0 +1,186 @@
+@import "partials/params";
+@import "partials/mixins";
+
+#header {  
+    background-color: $mainBg;
+    width: 100%; 
+    & div {
+        background-color: $mainBg;
+        height: 80px; 
+        width: 1309px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        & .settings {
+            background: url(../img/settings.svg) no-repeat;
+            width: 26px;
+            height: 22px;
+        };
+
+        & .search {
+            display: flex;
+            align-items: center;
+            margin-left: 160px;
+            & label {
+                @include visually-hidden;
+            }
+            & input {
+                width: 525px;
+                height: 40px;
+                border: 1px solid $softBorderColor;
+                border-radius: 20px;
+                padding: 0 20px;
+                font: inherit;
+                color: $mainFontColor;
+                font-size: 14px;
+                &:focus {
+                    color: $mainFontColor;
+                }
+            }
+            & button {
+                position: relative;
+                width: 36px;
+                height: 36px;
+                border-radius: 18px;
+                background-color: $elements;
+                left: -38px;
+                margin-right: -41px;
+                cursor: pointer;
+            }
+        };
+
+        & .main-navigation {
+            &>ul {
+                display: flex;
+                justify-content: space-between;
+                &>li {
+                    margin: 0 1px;
+                    cursor: pointer;
+                    &>a {
+                        width: 60px;
+                        height: 80px;
+                        padding-top: 20px;
+                        &::before{
+                            content: '';
+                            display: block;
+                            text-decoration: none;
+                            margin-bottom: 5px; 
+                        }
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: $mainFontColor;
+                        opacity: 0.5;
+                    }
+                    &:hover {
+                        &>a {
+                            opacity: 1;
+                            transition: opacity 0.5s;
+                        }
+                    }
+
+                    &.account {
+                        margin-right: 10px;
+                        position: relative;
+                        &>a {
+                            background: url(../img/account_hover.svg) no-repeat;
+                            background-position: center 21px;
+                            padding-top: 50px;
+                            text-align: center;
+                        }
+                        &:hover {
+                            & .account-navigation {
+                                top: 5px;
+                                opacity: 1;
+                                transition: opacity 0.5s;
+                            }
+                        }
+                        & .account-navigation {
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: -8px;
+                                left: 100px;
+                                display: block;
+                                width: 15px;
+                                height: 15px;
+                                background-color: rgba($color: #000000, $alpha: .8);
+                                transform: rotate(45deg);
+                            }
+                            position: absolute;
+                            // top: 8px;
+                            left: -75px;
+                            margin-top: 75px;
+                            // display: none;
+                            opacity: 0;
+                            top: -500px;
+
+                            flex-direction: column;
+                            width: 215px;
+                            z-index: 999;
+                            & ul {
+                                display: flex;
+                                flex-direction: column;
+                                & li {
+                                    height: 56px;
+                                    background-color: rgba($color: #000000, $alpha: .8);
+                                    width: 100%;
+                                    border-bottom: 1px solid $softBorderColor;
+                                    &:first-child{
+                                        border-bottom: 2px solid $softBorderColor;
+                                    }
+                                    & a {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: left;
+                                        width: 100%;
+                                        height: 100%;
+                                        color: #ffffff;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        padding-left: 20px;
+                                    }
+                                    &:hover {
+                                        transition-duration: 0.3s;
+                                        background-color: rgba($color: #000000, $alpha: 1.0);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.orders {
+                        & a {
+                            background: url(../img/orders_hover.svg) no-repeat;
+                            background-position: center 21px;
+                            padding-top: 50px;
+                            text-align: center;
+                        }
+                    }
+                    &.cart {
+                        & a {
+                            position: relative;
+                            background: url(../img/cart_hover.svg) no-repeat;
+                            background-position: center 21px;
+                            padding-top: 50px;
+                            text-align: center;
+                            &::after {
+                                content: "";
+                                width: 13px;
+                                height: 13px;
+                                position: absolute;
+                                background-color: $elements;
+                                border-radius: 50%;
+                                top: 16px;
+                                left: 37px;
+                                border: 2px solid $mainBg;
+                            }
+                        }
+                    }
+                }
+            };
+        }
+    }    
+}

@@ -1,0 +1,74 @@
+@import "partials/params";
+@import "partials/mixins";
+
+#container {
+    width: 1309px;
+    margin: 0 auto;
+
+    // outline: 1px solid gray;
+
+    & h1 {
+        padding-top: 28px;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 26px;
+    }
+    & .tools {
+        // outline: 1px solid red;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        border-bottom: 1px solid $softBorderColor;
+        padding-bottom: 19px;
+        margin-bottom: 24px;
+        & h2 { @include visually-hidden; }
+        & .filters {
+            display: flex;
+            align-items: center;
+            & ul {
+                & li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 131px;
+                    height: 32px;
+                    border: 1px solid $softBorderColor;
+                    border-radius: 16px;
+                    & .filter-closer{
+                        background-image: url('../img/closer_filter.svg');
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+
+        & .sorting {
+
+            & select {
+                font: inherit;
+
+                & option{
+
+                }
+            }
+        }        
+    
+    }
+
+    & .bestsellers{
+        // outline: 1px solid blue;
+        margin-bottom: 15px;
+    }
+
+    & .catalog {
+        outline: 1px solid coral;
+        margin-bottom: 15px;
+    }
+
+    & button {
+        // font: inherit;
+    }
+}

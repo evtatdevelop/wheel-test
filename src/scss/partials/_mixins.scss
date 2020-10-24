@@ -1,0 +1,55 @@
+@import "params";
+
+// hidden and !accessible!
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin flex-center($dir: column) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) { $pixels: $pixels * 1px; }
+  @if (unitless($context)) { $context: $context * 1px; }
+  @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder { @content; }
+  :-moz-placeholder { @content; }
+  ::-moz-placeholder { @content; }
+  :-ms-input-placeholder { @content; }
+}
+
+// @mixin app-color($color: $yellow) {
+//   outline: 5px solid $color;
+
+//   & h2 {
+//     color: $color;
+//   }
+
+//   & button {
+//     border: 1px solid $color;
+//     color: #ffffff;
+//     background: $color;
+//   }
+// }
