@@ -3,237 +3,238 @@
 
 #container {
     & .catalog {
-        background-color: $mainBg ;
+        // background-color: $mainBg ;
 
         & h2 { @include visually-hidden; }
     
-        & .goods .item-goods .good-form {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 80px;
-            margin: 0 20px;
+        & .goods .item-goods {
+            margin-bottom: 15px;
+            background-color: $mainBg ;
+            & .good-form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 80px;
+                margin: 0 20px;
 
-            &>div {
-                // outline: 1px solid red;
-                flex-grow: 1;
-                display: flex;
-            }    
-            & .header-container {
-                // max-width: 135px;
-                order: 1;
-                & h4 {
-                    font-size: 16px;
-                    font-weight: 700;
-                    display: inline-block;
-                    border-bottom: 2px solid black;
-                }    
-            } 
-            & .approved-container {
-                // outline: 1px solid red;
-                // flex-grow: 1;
-                order: 2;
-                display: flex;
-                & .approved {
+                &>div {
                     // outline: 1px solid red;
-                    // flex-grow: 0;
-                    width: 64px;
-                    height: 52px;
-                    margin: 0 auto;
-                    // order: 2;
-                }
-            }
-            & .type-container {
-                // outline: 1px solid red;
-                // flex-grow: 1;                
-                order: 3;
-                & .type {
-                    // max-width: 94px;
-                    line-height: 25px;
-                }                 
-            }
-            & .stock-container {
-                // flex-grow: 1;
-                // outline: 1px solid red;
-                order: 4;
-                flex-grow: 2;
-                & .stock {
-                    position: relative;
-                    // max-width: 78px;
-                    margin-top: -25px;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        display: block;
-                        width: 14px;
-                        height: 14px;
-                        border-radius: 7px;
-                        margin-bottom: -14px;
-                        left: 40px;
-                        top: 3px;
-                    }
-                    &::after {
-                        position: absolute;
-                        display: block;
-                        width: 150px;
-                        font-weight: 600;
-                        top: 25px;
-                    }
-                    &.instock {
-                        &::before {
-                            background: url(../img/instock.svg) no-repeat; 
-                            background-color: $inStock;
-                            background-position: center, center;
-                        }    
-                    }
-                    &.eight-tires-left {
-                        &::before {
-                            background: url(../img/eight-tires-left.svg) no-repeat; 
-                            background-color: $fewStock;
-                            background-position: center, center;
-                        }
-                        &::after {
-                            // position: absolute;
-                            content: "8 Tires Left";
-                            // top: 12px;
-                            // right: 35px;
-                            color: $mainFontColor;
-                            // font-weight: 600;
-                        }
-                    }
-                    &.back-in-week {
-                        &::before {
-                            background: url(../img/back-in-week.svg) no-repeat; 
-                            background-color: $noSstock;
-                            background-position: center, center;
-                        }
-                        &::after {
-                            // position: absolute;
-                            content: "Back in 1 week!";
-                            // top: 12px;
-                            // right: 35px;
-                            color: $noSstock;
-                            // font-weight: 600;
-                        }
-                    }
-                }
-            }
-
-            & .price-container{
-                // outline: 1px solid red;
-                // max-width: 90px;
-                // flex-grow: 1;
-                order: 5;               
-                & .pice {
-    
-                }                 
-            }
-            & .total-container{
-                // outline: 1px solid red;
-                // flex-grow: 1;
-                order: 7;
-                display: flex;
-                 & .total {
-                     margin: 0 auto;
-                    // max-width: 120px;
-                    line-height: 24px;
-                    & span {
-                        font-size: 20px;
-                        font-weight: 700;
-                    }
-                }               
-            }
- 
-            & .clicker-container{       
-                // outline: 1px solid red;
-                // flex-grow: 1;
-                order: 6;
-                display: flex;
-                & .clicker {
-                    margin: 0 auto;
-                    flex-grow: 0;
-                    flex-shrink: 0;
+                    flex-grow: 1;
                     display: flex;
-                    border: 1px solid $softBorderColor;
-                    
-                    & button {
-                        position: relative;
-                        width: 40px;
-                        height: 40px;
-                        padding-top: 0;
-                        background-color: $mainBg ;
-                        font-size: 24px;
-                        cursor: pointer;
-
-                    }
-                    & input {
-                        width: 40px;
-                        height: 40px;
-                        background-color: $clickerInputBg;
-                        text-align: center;
-                        font: inherit;
+                }    
+                & .header-container {
+                    max-width: 153px;
+                    order: 1;
+                    & h4 {
                         font-size: 16px;
                         font-weight: 700;
+                        display: inline-block;
+                        border-bottom: 2px solid black;
+                    }    
+                } 
+                & .approved-container {
+                    margin-right: 23px; 
+                    order: 2;
+                    display: flex;
+                    & .approved {
+                        // outline: 1px solid red;
+                        // flex-grow: 0;
+                        width: 64px;
+                        height: 52px;
+                        margin: 0 auto;
+                        // order: 2;
                     }
                 }
-            } 
-            & .btn-order-container{
-                // flex-grow: 1;
-                // outline: 1px solid red;
-                order: 8;
-                display: flex;
-                & .btn-order {
-                    margin-left: auto;
-                    flex-grow: 0;
-                    font: inherit;
-                    font-weight: 700;
-                    width: 152px;
-                    height: 40px;
-                    border-radius: 20px;
-                    // margin-right: 15px;
-                    cursor: pointer;
-                    
-                    &.add-to-cart {
-                        padding-left: 40px;
-                        background: url(../img/button_cart.svg) no-repeat;
-                        background-position: 20px center;
-                        background-color: $elements;
+                & .type-container {
+                    max-width: 162px;        
+                    order: 3;
+                    & .type {
+                        // max-width: 94px;
+                        line-height: 25px;
+                    }                 
+                }
+                & .stock-container {
+                    // flex-grow: 1;
+                    // outline: 1px solid red;
+                    order: 4;
+                    flex-grow: 1;
+                    margin-right: 27px;
+                    & .stock {
+                        position: relative;
+                        // max-width: 78px;
+                        margin-top: -25px;
+
                         &::before {
-                            box-sizing: content-box;
-                            display: flex;
-                            position: relative;
-                            left: -3px;
-                            top: 2px;
-                            width: 10px;
-                            height: 10px;
                             content: '';
-                            border: 2px solid $elements;
-                            border-radius: 6px;
-                            background: url(../img/cartplus.svg) no-repeat;
-                            background-color: #000000;
-                            background-position: center center;
-                            justify-content: center;
-                            align-items: center;
+                            position: absolute;
+                            display: block;
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 7px;
+                            margin-bottom: -14px;
+                            left: 40px;
+                            top: 3px;
                         }
                         &::after {
-                            position: relative;
-                            top: -6px;
-                            content: 'Add to Cart';                     
+                            position: absolute;
+                            display: block;
+                            width: 150px;
+                            font-weight: 600;
+                            top: 25px;
                         }
-                    }
-                    &.notify-me {
-                        padding-left: 40px;
-                        background: url(../img/button_bell.svg) no-repeat;
-                        background-position: 20px center;
-                        background-color: $mainBg;
-                        border: 2px solid $elements;
-                        &::after {
-                            content: 'Notify Me!';
+                        &.instock {
+                            &::before {
+                                background: url(../img/instock.svg) no-repeat; 
+                                background-color: $inStock;
+                                background-position: center, center;
+                            }    
+                        }
+                        &.eight-tires-left {
+                            &::before {
+                                background: url(../img/eight-tires-left.svg) no-repeat; 
+                                background-color: $fewStock;
+                                background-position: center, center;
+                            }
+                            &::after {
+                                // position: absolute;
+                                content: "8 Tires Left";
+                                // top: 12px;
+                                // right: 35px;
+                                color: $mainFontColor;
+                                // font-weight: 600;
+                            }
+                        }
+                        &.back-in-week {
+                            &::before {
+                                background: url(../img/back-in-week.svg) no-repeat; 
+                                background-color: $noSstock;
+                                background-position: center, center;
+                            }
+                            &::after {
+                                // position: absolute;
+                                content: "Back in 1 week!";
+                                // top: 12px;
+                                // right: 35px;
+                                color: $noSstock;
+                                // font-weight: 600;
+                            }
                         }
                     }
                 }
-            }    
+
+                & .price-container{
+                    max-width: 104px;
+                    order: 5;               
+                    & .pice {
+        
+                    }                 
+                }
+                & .total-container{
+                    // outline: 1px solid red;
+                    // flex-grow: 1;
+                    order: 7;
+                    display: flex;
+                    & .total {
+                        margin: 0 auto;
+                        // max-width: 120px;
+                        line-height: 24px;
+                        & span {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                    }               
+                }
+    
+                & .clicker-container{       
+                    // outline: 1px solid red;
+                    // flex-grow: 1;
+                    order: 6;
+                    display: flex;
+                    & .clicker {
+                        margin: 0 auto;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        display: flex;
+                        border: 1px solid $bodyBg;
+                        
+                        & button {
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                            padding-top: 0;
+                            background-color: $mainBg ;
+                            font-size: 24px;
+                            cursor: pointer;
+
+                        }
+                        & input {
+                            width: 40px;
+                            height: 40px;
+                            background-color: $clickerInputBg;
+                            text-align: center;
+                            font: inherit;
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }
+                } 
+                & .btn-order-container{
+                    // flex-grow: 1;
+                    // outline: 1px solid red;
+                    order: 8;
+                    display: flex;
+                    & .btn-order {
+                        margin-left: auto;
+                        flex-grow: 0;
+                        font: inherit;
+                        font-weight: 700;
+                        width: 152px;
+                        height: 40px;
+                        border-radius: 20px;
+                        // margin-right: 15px;
+                        cursor: pointer;
+                        
+                        &.add-to-cart {
+                            padding-left: 40px;
+                            background: url(../img/button_cart.svg) no-repeat;
+                            background-position: 20px center;
+                            background-color: $elements;
+                            &::before {
+                                box-sizing: content-box;
+                                display: flex;
+                                position: relative;
+                                left: -3px;
+                                top: 2px;
+                                width: 10px;
+                                height: 10px;
+                                content: '';
+                                border: 2px solid $elements;
+                                border-radius: 6px;
+                                background: url(../img/cartplus.svg) no-repeat;
+                                background-color: #000000;
+                                background-position: center center;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            &::after {
+                                position: relative;
+                                top: -6px;
+                                content: 'Add to Cart';                     
+                            }
+                        }
+                        &.notify-me {
+                            padding-left: 40px;
+                            background: url(../img/button_bell.svg) no-repeat;
+                            background-position: 20px center;
+                            background-color: $mainBg;
+                            border: 2px solid $elements;
+                            &::after {
+                                content: 'Notify Me!';
+                            }
+                        }
+                    }
+                } 
+            }       
         }  
     }
 }
