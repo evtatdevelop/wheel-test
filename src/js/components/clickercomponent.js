@@ -19,25 +19,38 @@ function decrease() {
     let val = +this.inpt.value;
     if (val > 1) {
         this.inpt.value = val - 1;
-        this.total.textContent = +this.price * (val-1);
+        // this.total.textContent = +this.price * (val-1);
+        var tp = +this.price * (val-1);
+        this.total.textContent = numberWithCommas(tp);
     } else {
         this.inpt.value = 1;
-        this.total.textContent = +this.price;
+        // this.total.textContent = +this.price;
+        this.total.textContent = numberWithCommas(+this.price);
     }
 };
 
 function increase() {
     let val = +this.inpt.value + 1;
     this.inpt.value = val;
-    this.total.textContent = +this.price * val;
+    // this.total.textContent = +this.price * val;
+    var tp = +this.price * val;
+    this.total.textContent = numberWithCommas(tp);
 };
 
 function reset() {
     let val = +this.inpt.value;
     if (val < 1) {
         this.inpt.value = 1;
-        this.total.textContent = +this.price;
+        this.total.textContent = numberWithCommas(+this.price);;
     } else {
-        this.total.textContent = +this.price * val;
+        // this.total.textContent = +this.price * val;
+        var tp = +this.price * val;
+        this.total.textContent = numberWithCommas(tp);
     }
+}
+
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
 }
