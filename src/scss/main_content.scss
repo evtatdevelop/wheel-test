@@ -38,6 +38,7 @@
                     border: 1px solid $softBorderColor;
                     border-radius: 16px;
                     padding: 0 10px;
+                    background-color: $bodyBg;
                     & .filter-closer{
                         background-image: url('../img/closer_filter.svg');
                         width: 16px;
@@ -49,12 +50,25 @@
         }
 
         & .sorting {
-
-            & select {
+            & .sorting_select {
+                position: relative;
                 font: inherit;
-
-                & option{
-
+                appearance: none;
+                width: 115px;
+                height: 31px;
+                border-radius: 16px;
+                border: 1px solid $softBorderColor;
+                background-color: $bodyBg;
+                padding: 0 10px 1px 10px;
+                & option {
+                    // display: block !important;
+                    // position: absolute;
+                    background-color: #ffffff;
+                    top: -31px !important;
+                    // margin-top: -31px !important;
+                    // &:first-child {
+                    //     border-bottom: 1px solid $softBorderColor;
+                    // }
                 }
             }
         }        

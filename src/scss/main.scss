@@ -8,11 +8,12 @@
 
 // TODO: 
 // accessibility
-// :focus {
-//   outline: none;
-//   box-shadow: 0 0 1px $mainBg;
-//   box-shadow: 0 0 3px $elements;
-// }
+:focus {
+  // outline: 1PX solid $fewStock;
+  // outline: none;
+  // box-shadow: 0 0 1px $mainBg;
+  // box-shadow: 0 0 3px $elements;
+}
 
 html {
   font-size: $mainFontSize;
@@ -37,7 +38,9 @@ body {
   font-family: Calibri;
   font-size: $mainFontSize;
   font-weight: $mainFontWeight;
-  background-color: $bodyBg;
+  background-color: #E7E7E7;
+  background-image: url('../img/bg_grey_tile.jpg');
+  background-size: cover;
 }
 
 // *, *:before, *:after {
