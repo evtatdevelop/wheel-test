@@ -29,6 +29,7 @@
             align-items: center;
             & ul {
                 & li {
+                    position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -36,10 +37,12 @@
                     height: 32px;
                     border: 1px solid $softBorderColor;
                     border-radius: 16px;
+                    padding: 0 10px;
                     & .filter-closer{
                         background-image: url('../img/closer_filter.svg');
                         width: 16px;
                         height: 16px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -59,16 +62,24 @@
     }
 
     & .bestsellers{
-        // outline: 1px solid blue;
         margin-bottom: 15px;
     }
 
     & .catalog {
-        // outline: 1px solid coral;
         margin-bottom: 15px;
     }
 
-    & button {
-        // font: inherit;
+    & .load-nore-resalt {
+        height: 50px;
+        width: 100%;
+        border-radius: 25px;
+        border: 2px solid $softBorderColor;
+        margin-bottom: 20px;
+        background-color: $bodyBg;
+        font-weight: 700;
+        cursor: pointer;
+        &:active {
+            padding: 0;
+        }
     }
 }

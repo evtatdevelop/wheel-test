@@ -79,20 +79,25 @@
                         & .stock {
                             padding-top: 3px;
                             padding-bottom: 3px;
+                            position: relative;
                             &::before{
                                 content: '';
-                                position: relative;
+                                position: absolute;
                                 display: block;
                                 width: 14px;
                                 height: 14px;
                                 border-radius: 7px;
-                                margin-bottom: -14px;
                                 left: 40px;
-                                top: 3px;
+                                top: 6px;
                             }
                             &::after {
+                                position: absolute;
                                 white-space: nowrap;
                                 overflow: hidden;
+                                top: 15px;
+                                left: 0px;
+                                color: $mainFontColor;
+                                font-weight: 600;
                             }
                             &.instock {
                                 &::before {
@@ -108,12 +113,12 @@
                                     background-position: center, center;
                                 }
                                 &::after {
-                                    position: relative;
+                                    // position: absolute;
                                     content: "8 Tires Left";
-                                    top: 12px;
-                                    right: 35px;
-                                    color: $mainFontColor;
-                                    font-weight: 600;
+                                    // top: 12px;
+                                    // right: 35px;
+                                    // color: $mainFontColor;
+                                    // font-weight: 600;
                                 }
                             }
                             &.back-in-week {
@@ -123,12 +128,12 @@
                                     background-position: center, center;
                                 }
                                 &::after {
-                                    position: relative;
+                                    // position: absolute;
                                     content: "Back in 1 week!";
-                                    top: 12px;
-                                    right: 35px;
-                                    color: $noSstock;
-                                    font-weight: 600;
+                                    // top: 12px;
+                                    // right: 35px;
+                                    // color: $noSstock;
+                                    // font-weight: 600;
                                 }
                             }
                         }                

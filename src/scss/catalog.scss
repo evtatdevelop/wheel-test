@@ -18,7 +18,6 @@
                 margin: 0 20px;
 
                 &>div {
-                    // outline: 1px solid red;
                     flex-grow: 1;
                     display: flex;
                 }    
@@ -37,33 +36,25 @@
                     order: 2;
                     display: flex;
                     & .approved {
-                        // outline: 1px solid red;
-                        // flex-grow: 0;
                         width: 64px;
                         height: 52px;
                         margin: 0 auto;
-                        // order: 2;
                     }
                 }
                 & .type-container {
                     max-width: 162px;        
                     order: 3;
                     & .type {
-                        // max-width: 94px;
                         line-height: 25px;
                     }                 
                 }
                 & .stock-container {
-                    // flex-grow: 1;
-                    // outline: 1px solid red;
                     order: 4;
                     flex-grow: 1;
                     margin-right: 27px;
                     & .stock {
                         position: relative;
-                        // max-width: 78px;
                         margin-top: -25px;
-
                         &::before {
                             content: '';
                             position: absolute;
@@ -83,6 +74,7 @@
                             top: 25px;
                         }
                         &.instock {
+                            margin-top: 2px;
                             &::before {
                                 background: url(../img/instock.svg) no-repeat; 
                                 background-color: $inStock;
@@ -96,12 +88,8 @@
                                 background-position: center, center;
                             }
                             &::after {
-                                // position: absolute;
                                 content: "8 Tires Left";
-                                // top: 12px;
-                                // right: 35px;
                                 color: $mainFontColor;
-                                // font-weight: 600;
                             }
                         }
                         &.back-in-week {
@@ -111,12 +99,8 @@
                                 background-position: center, center;
                             }
                             &::after {
-                                // position: absolute;
                                 content: "Back in 1 week!";
-                                // top: 12px;
-                                // right: 35px;
                                 color: $noSstock;
-                                // font-weight: 600;
                             }
                         }
                     }
@@ -130,24 +114,23 @@
                     }                 
                 }
                 & .total-container{
-                    // outline: 1px solid red;
-                    // flex-grow: 1;
                     order: 7;
                     display: flex;
                     & .total {
                         margin: 0 auto;
-                        // max-width: 120px;
                         line-height: 24px;
                         & span {
                             font-size: 20px;
                             font-weight: 700;
                         }
+                        & .total-price-value {
+                            width: 50px;
+                            display: inline-block;
+                        }
                     }               
                 }
     
                 & .clicker-container{       
-                    // outline: 1px solid red;
-                    // flex-grow: 1;
                     order: 6;
                     display: flex;
                     & .clicker {
@@ -179,8 +162,6 @@
                     }
                 } 
                 & .btn-order-container{
-                    // flex-grow: 1;
-                    // outline: 1px solid red;
                     order: 8;
                     display: flex;
                     & .btn-order {
@@ -191,9 +172,7 @@
                         width: 152px;
                         height: 40px;
                         border-radius: 20px;
-                        // margin-right: 15px;
-                        cursor: pointer;
-                        
+                        cursor: pointer;                       
                         &.add-to-cart {
                             padding-left: 40px;
                             background: url(../img/button_cart.svg) no-repeat;
