@@ -9,10 +9,8 @@
 // TODO: 
 // accessibility
 :focus {
-  // outline: 1PX solid $fewStock;
-  // outline: none;
-  // box-shadow: 0 0 1px $mainBg;
-  // box-shadow: 0 0 3px $elements;
+  box-shadow: 0 0 3px #E7E7E7;
+  box-shadow: 0 0 5px rgba(255,165,0,1);;
 }
 
 html {
